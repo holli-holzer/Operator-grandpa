@@ -1,9 +1,9 @@
 use Test;
-use Data::Dump;
 
 use Operator::grandpa;
 
 plan 3;
+
 class Node {
   has $.name;
   has $.parent;
