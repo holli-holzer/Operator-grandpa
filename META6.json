@@ -1,8 +1,8 @@
 {
   "name" : "Operator-grandpa",
-  "source-url" : "",
+  "source-url" : "https://github.com/holli-holzer/Operator-grandpa.git",
   "support" : {
-    "source" : null
+    "source" : "https://github.com/holli-holzer/Operator-grandpa.git"
   },
   "perl" : "6.c",
   "license" : "Artistic-2.0",
