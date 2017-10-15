@@ -1,23 +1,32 @@
-use v6;
-#`(
-Copyright ©  holli.holzer@gmail.com
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-)
 use Test;
+use Data::Dump;
+
 use Operator::grandpa;
 
-pass "replace me";
+plan 3;
+class Node {
+  has $.name;
+  has $.parent;
+}
+
+my $child = Node.new(
+  :name("out"),
+  :parent( Node.new(
+    :name("mid"),
+    :parent( Node.new(
+      :name("inner"),
+      :parent( Node.new( :name("root") ) )
+    ))
+  ))
+);
+
+my $root = $child :| { .parent }
+ok $root.name ~~ "root";
+
+my $root2 = $child :| -> $node { $node.parent }
+ok $root2.name ~~ "root";
+
+my $a = 1;
+ok $a 𝄇 { $++ > 2 ?? Any !! $_ * 2 } == 8;
 
 done-testing;
