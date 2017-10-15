@@ -44,8 +44,8 @@ It does that until the code block evaluates to ```Any```, then returns the last 
 Note, that if you assign to ```$_``` within the code block, this also changes the LHS
 of the operator. So, don't do that, unless that's what you want.
 
-  multi sub prefix:<|:>(Any --> Callable:D)
-  multi sub prefix:<𝄆>(Any --> Callable:D)
+    multi sub prefix:<|:>(Any --> Callable:D)
+    multi sub prefix:<𝄆>(Any --> Callable:D)
 
 Alternatively you can use this version of the operator, which does the same as above but operates on a copy of the LHS, thus allowing assigning to ```$_``` safely.
 
