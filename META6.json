@@ -1,21 +1,21 @@
 {
-  "name" : "Operator::grandpa",
-  "source-url" : "https://github.com/holli-holzer/Operator-grandpa.git",
-  "description" : "The grandpa operator",
-  "version" : "1.001002",
-  "perl" : "6.c",
-  "auth": "github:holli-holzer",
+  "name": "Operator::grandpa",
+  "description": "An object recursion operator",
+  "version": "1.001002",
+  "perl": "6.c",
   "authors": [
     "Markus 'Holli' Holzer (holli.holzer@gmail.com)"
   ],
-  "depends" : [],
+  "auth": "github:holli-holzer",
+  "depends": [],
   "build-depends": [],
   "test-depends": [],
-  "provides" : {
-    "Operator::grandpa" : "lib/Operator/grandpa.pm6"
+  "provides": {
+    "Operator::grandpa": "lib/Operator/grandpa.pm6"
   },
   "resources": [],
+  "license": "BSD-3-Clause",
   "tags": [],
-  "license" : "BSD-3-Clause",
-  "api": 1
+  "api": 1,
+  "source-url": "https://github.com/holli-holzer/Operator-grandpa.git"
 }
