@@ -1,4 +1,4 @@
-class Operator::grandpa
+class Operator::grandpa:ver<1.001002>:auth<Markus 'Holli' Holzer (holli.holzer@gmail.com)>;
 {
   multi sub infix:«𝄇»(Any \obj, Callable \code) is export
   {
